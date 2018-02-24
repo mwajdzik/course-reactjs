@@ -1,11 +1,13 @@
 {
-  "name": "01-basics",
+  "name": "01-video-player",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.1.1",
+    "youtube-api-search": "0.0.5",
+    "lodash": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
