@@ -16,9 +16,7 @@ export default class App extends Component {
         this.videoSearch('Z nurtem życia');
     }
 
-    videoSearchHandler = _.debounce((term) => {
-        this.videoSearch(term)
-    }, 2000);
+    videoSearchHandler = _.debounce(term => this.videoSearch(term), 1000);
 
     videoSearch(term) {
         YTSearch({key: YOUTUBE_API_KEY, term: term}, (videos) => {
@@ -37,7 +35,7 @@ export default class App extends Component {
             <div>
                 <SearchBar onSearchTermChange={(term) => this.videoSearchHandler(term)}/>
                 <VideoDetail video={this.state.selectedVideo}/>
-                <VideoList videos={this.state.videos} onVideoSelect={(selectedVideo) => this.setState({selectedVideo})}/>
+                <VideoList videos={this.state.videos} onVideoSelect={selectedVideo => this.setState({selectedVideo})}/>
             </div>
         );
     }

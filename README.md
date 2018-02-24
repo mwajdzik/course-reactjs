@@ -19,4 +19,5 @@ HTML inside of JavaScript
 # Components
 
 - functional (simple)
-- class-based (allows interactions with other components)
+- class-based (allows interactions with other components and when state is required)
+
