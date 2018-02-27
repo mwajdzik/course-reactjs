@@ -28,13 +28,17 @@ HTML inside of JavaScript
 - class-based (allows interactions with other components and when state is required)
 
 
+# State
+
+- local of a component
+- global managed by Redux and split into parts managed by reducers
+
+
 # Redux
 
 - a reducer - a function that returns a piece of the app state
 - a container - a "smart" component (aware of Redux's state)
 
-
-# React & Redux
 
 ### ACTION CREATOR → ACTION → REDUCERS → new state creation (immutable) → rerender 
 

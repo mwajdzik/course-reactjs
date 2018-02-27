@@ -1,3 +1,4 @@
+// state this reducer is responsible for (not the whole app's)
 export default function (state = null, action) {
     switch (action.type) {
         case 'BOOK_SELECTED':
