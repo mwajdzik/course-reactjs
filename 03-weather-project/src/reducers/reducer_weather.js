@@ -1,6 +1,6 @@
 import {FETCH_WEATHER} from "../actions/index";
 
-// redux-promise took a promise, and when resolved returned a payload for us
+// redux-promise takes a promise, and when resolved returns a payload
 // state = [], the initial state is the empty array of cities
 export default function (state = [], action) {
     console.log('reducer_weather:', action);

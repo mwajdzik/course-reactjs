@@ -7,13 +7,10 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 // action creator
 export function fetchWeather(city) {
-    const url = `${ROOT_URL}&q=${city},pl`;
-    const request = axios.get(url);
-
     // we use redux-promise middleware which will check if there is any promise in the returned object
-    // if so, it will wait until the promise is resolved and then proceed to a reduce
+    // if so, it will wait until the promise is resolved and then proceed to a reducer
     return {
         type: FETCH_WEATHER,
-        payload: request
+        payload: axios.get(`${ROOT_URL}&q=${city},pl`)
     };
 }

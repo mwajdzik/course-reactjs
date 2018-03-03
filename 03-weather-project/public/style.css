@@ -1,10 +1,15 @@
+body {
+    margin: 20px 40px;
+}
+
 td, th {
     vertical-align: middle !important;
     text-align: center !important;
 }
 
 .input-group {
-    margin: 20px 0;
+    width: 75%;
+    margin: 10px auto;
 }
 
 svg {
@@ -14,4 +19,9 @@ svg {
 td:first-of-type, td:first-of-type > div {
     height: 200px;
     width: 250px;
+}
+
+.table {
+    width: 75%;
+    margin: 30px auto 10px;
 }
