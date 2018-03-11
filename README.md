@@ -47,6 +47,7 @@ The state is modified by calling action creators.
 The action creators return actions, that flow through middlewares, and then to the reducers.
 Whenever a new state is produced, it flows through our containers, which re-render themselves.
 
+
 ### A functional component (don't have state):
 
 ```
@@ -54,6 +55,7 @@ export default () => {
     return <input />;
 };
 ```
+
 
 ### A class-based component (have state):
 
@@ -69,6 +71,7 @@ export default class App extends Component {
 }
 ```
 
+
 ### Design:
 
 - identify components and containers
@@ -81,7 +84,8 @@ export default class App extends Component {
 
 
 #### https://github.com/gaearon/redux-thunk
-- Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. 
+- Redux Thunk middleware allows you to write action creators that return a function instead of an action. 
+- The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. 
 
 ```
 export function fetchUsers {
@@ -94,6 +98,7 @@ export function fetchUsers {
     }
 }
 ```
+
 
 ### Higher Order Components
 
@@ -121,6 +126,7 @@ export function fetchUsers {
     
     return _.omit(state, postIdToDelete);
 ```
+
 
 ### Good parts
 

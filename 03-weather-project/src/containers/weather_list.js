@@ -14,18 +14,10 @@ class WeatherList extends Component {
 
         return (
             <tr key={name}>
-                <td>
-                    <GoogleMap lon={lon} lat={lat}/>
-                </td>
-                <td>
-                    <Chart data={temps} color='orange' units='K'/>
-                </td>
-                <td>
-                    <Chart data={pressures} color='blue' units='hPa'/>
-                </td>
-                <td>
-                    <Chart data={humidities} color='brown' units='%'/>
-                </td>
+                <td><GoogleMap lon={lon} lat={lat}/></td>
+                <td><Chart data={temps} color='orange' units='K'/></td>
+                <td><Chart data={pressures} color='blue' units='hPa'/></td>
+                <td><Chart data={humidities} color='brown' units='%'/></td>
             </tr>
         );
     }
@@ -49,8 +41,9 @@ class WeatherList extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {weather: state.weather};
+// state.weather
+function mapStateToProps({weather}) {
+    return {weather};
 }
 
 export default connect(mapStateToProps)(WeatherList);
