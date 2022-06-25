@@ -5,12 +5,14 @@ import Components from "./01-components/Components";
 import State from "./02-state/State";
 import Pictures from "./03-events/Pictures";
 import Player from "./04-video-player/Player";
+import Widgets from "./05-hooks/Widgets";
 
 const panes = [
     {menuItem: 'Components', render: () => <Tab.Pane><Components/></Tab.Pane>},
     {menuItem: 'State', render: () => <Tab.Pane><State/></Tab.Pane>},
     {menuItem: 'Pictures', render: () => <Tab.Pane><Pictures/></Tab.Pane>},
     {menuItem: 'Player', render: () => <Tab.Pane><Player/></Tab.Pane>},
+    {menuItem: 'Widgets', render: () => <Tab.Pane><Widgets/></Tab.Pane>},
 ];
 
 const App = () => {

@@ -5,4 +5,3 @@ Hooks system
 - useRef - a function that lets you create a ref in a functional component
 
 hooks are a way to write reusable code, instead of more classic techniques like inheritance
-

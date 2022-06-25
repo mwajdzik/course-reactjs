@@ -9,7 +9,8 @@ class Player extends React.Component {
 
     state = {
         videos: [],
-        selectedVideo: null
+        selectedVideo: null,
+        error: null
     }
 
     componentDidMount() {
@@ -17,16 +18,18 @@ class Player extends React.Component {
     }
 
     onSearchSubmit = async (term) => {
-        const response = await youtube.get('/search', {
-            params: {
-                q: term
-            }
-        });
+        try {
+            const response = await youtube.get('/search', {params: {q: term}});
 
-        this.setState({
-            'videos': response.data.items,
-            'selectedVideo': response.data.items[0]
-        });
+            this.setState({
+                'videos': response.data.items,
+                'selectedVideo': response.data.items[0]
+            });
+        } catch (ex) {
+            this.setState({
+                error: 'Service unavailable!'
+            });
+        }
     }
 
     onVideoSelect = (selectedVideo) => {
@@ -34,6 +37,10 @@ class Player extends React.Component {
     }
 
     render() {
+        if (this.state.error) {
+            return <div>{this.state.error}</div>
+        }
+
         return <div className='ui container'>
             <SearchBar onSubmit={this.onSearchSubmit}/>
 

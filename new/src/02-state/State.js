@@ -7,7 +7,10 @@ class State extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {latitude: null, errorMessage: null};
+        this.state = {
+            latitude: null,
+            errorMessage: null
+        };
     }
 
     componentDidMount() {
@@ -33,13 +36,13 @@ class State extends React.Component {
 
     render() {
         if (this.state.latitude && !this.state.errorMessage) {
-            return <SeasonDisplay latitude={this.state.latitude}/>
+            return <SeasonDisplay latitude={this.state.latitude}/>;
         }
 
         if (this.state.errorMessage && !this.state.latitude) {
             return <div>
                 Error: {this.state.errorMessage}
-            </div>
+            </div>;
         }
 
         return <Spinner message='Please accept location request'/>
