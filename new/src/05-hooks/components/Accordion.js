@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 const Accordion = ({items}) => {
     console.log("Accordion called!")
 
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
     console.log("activeIndex =", activeIndex)
 
     const itemClicked = (index) => {
